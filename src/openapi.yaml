@@ -1,0 +1,31 @@
+openapi: 3.0.0
+
+info:
+  title: title
+  description: description
+  version: 0.0.1
+
+servers:
+  - url: http://{host}:{port}
+    description: dev
+    variables:
+      host:
+        default: localhost
+      port:
+        default: '3000'
+
+paths:
+  /:
+    get:
+      summary: summary
+      description: description
+      responses:
+        '200':
+          description: description
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
